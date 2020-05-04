@@ -1,3 +1,4 @@
+<%@page import="com.Laboratory"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -11,6 +12,9 @@
 
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <link rel="stylesheet" href="Views/main.css">
+
+<script src="Components/jquery-3.2.1.min.js"></script>
+<script src="Components/laboratories.js"></script>
 
 </head>
 <body class="mainbody">
@@ -101,9 +105,23 @@
 			</form>
 		</div>
 
-		
 
 
+		<br> <br>
+		<div class="form-v9-content">
+			<div id="alertSuccess" class="alert alert-success"></div>
+			<div id="alertError" class="alert alert-danger"></div>
+
+			<br>
+		</div>
+		<div class="mainform">
+			<div id="divItemsGrid">
+				<%
+					Laboratory labObj = new Laboratory();
+				out.print(labObj.readLaboratories());
+				%>
+			</div>
+		</div>
 
 
 	</div>
