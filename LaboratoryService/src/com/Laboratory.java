@@ -103,7 +103,7 @@ public class Laboratory {
 				String OpenTime = rs.getString("OpenTime");
 				String CloseTime = rs.getString("CloseTime");
 				// Add into the HTML table
-				output += "<tr><td><input id='hidItemIDUpdate' name='hidItemIDUpdate' type='hidden' value='" + labRegID
+				output += "<tr><td><input id='hidLabIDUpdate' name='hidLabIDUpdate' type='hidden' value='" + labRegID
 						+ "'>" + labRegID + "</td>";
 				output += "<td>" + labName + "</td>";
 				output += "<td>" + labAddress + "</td>";

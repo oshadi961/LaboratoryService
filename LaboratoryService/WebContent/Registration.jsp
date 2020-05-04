@@ -99,7 +99,7 @@
 
 				<input id="btnSave" name="btnSave" type="button" value="Save"
 					class="btn btn-outline-success"> <input type="hidden"
-					id="hidItemIDSave" name="hidItemIDSave" value=""> <br>
+					id="hidLabIDSave" name="hidLabIDSave" value=""> <br>
 				<br>
 
 			</form>

@@ -62,7 +62,7 @@ public class LabsAPI extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
-		String output = labObj.updateLaboratory(paras.get("hidItemIDSave").toString(), paras.get("LabName").toString(),
+		String output = labObj.updateLaboratory(paras.get("hidLabIDSave").toString(), paras.get("LabName").toString(),
 				paras.get("LabAddress").toString(), paras.get("LabCity").toString(),
 				paras.get("LabDestrict").toString(), paras.get("LabProvince").toString(), paras.get("Email").toString(),
 				paras.get("LabContactNum").toString(), paras.get("LabUsername").toString(),
