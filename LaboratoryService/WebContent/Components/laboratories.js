@@ -34,7 +34,7 @@ $(document).on("click", "#btnSave", function(event) {
 	}
 
 	// If valid------------------------
-	var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
+	var type = ($("#hidLabIDSave").val() == "") ? "POST" : "PUT";
 
 	$.ajax({
 		url : "LabsAPI",
@@ -42,7 +42,7 @@ $(document).on("click", "#btnSave", function(event) {
 		data : $("#formLab").serialize(),
 		dataType : "text",
 		complete : function(response, status) {
-			onItemSaveComplete(response.responseText, status);
+			onLabSaveComplete(response.responseText, status);
 			
 		}
 	});
@@ -50,7 +50,7 @@ $(document).on("click", "#btnSave", function(event) {
 
 });
 
-function onItemSaveComplete(response, status) {
+function onLabSaveComplete(response, status) {
 	
 	
 	if (status == "success") {
@@ -70,7 +70,7 @@ function onItemSaveComplete(response, status) {
 		$("#alertError").text("Unknown error while saving..");
 		$("#alertError").show();
 	}
-	$("#hidItemIDSave").val("");
+	$("#hidLabIDSave").val("");
 	$("#formLab")[0].reset();
 
 }
@@ -78,7 +78,7 @@ function onItemSaveComplete(response, status) {
 //UPDATE==========================================
 $(document).on(	"click",".btnUpdate",function(event) {
 
-			$("#hidItemIDSave").val($(this).closest("tr").find('#hidItemIDUpdate').val());
+			$("#hidLabIDSave").val($(this).closest("tr").find('#hidLabIDUpdate').val());
 			$("#LabRegID").val($(this).closest("tr").find('td:eq(0)').text());
 			$("#LabName").val($(this).closest("tr").find('td:eq(1)').text());
 			$("#LabAddress").val($(this).closest("tr").find('td:eq(2)').text());
@@ -110,13 +110,13 @@ $(document).on("click", ".btnRemove", function(event) {
 		data : "labRegID=" + $(this).data("laboratoryid"),
 		dataType : "text",
 		complete : function(response, status) {
-			onItemDeleteComplete(response.responseText, status);
+			onLabDeleteComplete(response.responseText, status);
 			
 		}
 	});
 });
 
-function onItemDeleteComplete(response, status) {
+function onLabDeleteComplete(response, status) {
 	if (status == "success") {
 		var resultSet = JSON.parse(response);
 		if (resultSet.status.trim() == "success") {
