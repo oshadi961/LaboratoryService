@@ -114,7 +114,7 @@
 
 			<br>
 		</div>
-		<div class="mainform">
+		<div class="container">
 			<div id="divLabsGrid">
 				<%
 					Laboratory labObj = new Laboratory();

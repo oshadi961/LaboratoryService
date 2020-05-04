@@ -81,8 +81,8 @@ public class Laboratory {
 			}
 			// Prepare the html table to be displayed
 			output = "<table border='1' class='table table-striped table-dark'><tr><th>LabRegID</th> <th>Lab Name</th><th>Lab Address</th>"
-					+ "<th>Lab City</th><th>Lab Destrict</th> <th>Lab Province</th><th>Lab Email</th>"
-					+ "<th>Lab COntact Number</th> <th>Lab Username</th><th>Lab Password</th>"
+					+ "<th>Lab City</th><th>Lab District</th> <th>Lab Province</th><th>Lab Email</th>"
+					+ "<th>Lab Contact Number</th> <th>Lab Username</th><th>Lab Password</th>"
 					+ "<th>Lab OpenTime</th> <th>Lab CloseTime</th> <th>Update</th><th>Remove</th></tr>";
 
 			String query = "select * from lab";

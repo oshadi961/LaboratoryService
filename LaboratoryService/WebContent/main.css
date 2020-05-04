@@ -178,15 +178,25 @@
 
 
 
-.btn {
-	
-	width:30%;
-	height:5%;
+.container {
+	width: 1400px;
+	display: flex;
+	position: relative;
+	margin: 50px 50px 50px -100px;
+	background: #fff;
 	border-radius: 20px;
-	margin: 0 0 0 50px;
-	
 }
 
+
+
+
+
+#btnSave {
+	width: 30%;
+	height: 5%;
+	border-radius: 20px;
+	margin: 0 0 0 50px;
+}
 
 
 
