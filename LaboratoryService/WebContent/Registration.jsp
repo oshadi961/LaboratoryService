@@ -86,12 +86,12 @@
 					</div>
 
 					<div class="form-group">
-						<input type="text" class="lab" id="OpenTime" name="OpenTime"
+						<input type="time" class="lab" id="OpenTime" name="OpenTime"
 							placeholder="OpenTime">
 					</div>
 
 					<div class="form-group">
-						<input type="text" class="lab" id="CloseTime" name="CloseTime"
+						<input type="time" class="lab" id="CloseTime" name="CloseTime"
 							placeholder="CloseTime">
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 			<br>
 		</div>
 		<div class="mainform">
-			<div id="divItemsGrid">
+			<div id="divLabsGrid">
 				<%
 					Laboratory labObj = new Laboratory();
 				out.print(labObj.readLaboratories());
