@@ -20,7 +20,7 @@ public class Laboratory {
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3307/test", "root", "root");
+			con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3307/laboratory", "root", "root");
 			System.out.print("Successfully connected");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -43,7 +43,7 @@ public class Laboratory {
 					+ "(`labRegID`,`labName`,`labAddress`,`labCity`,`labDestrict`,`labProvince`,`labEmail`,`labContactNum`,`labUsername`,`labPassword`,`OpenTime`,`CloseTime`)"
 					+ " values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			PreparedStatement preparedStmt = con.prepareStatement(query);
-			System.out.println("VALUES");
+			
 			// binding values
 			preparedStmt.setString(1, LabRegID);
 			preparedStmt.setString(2, LabName);
@@ -58,9 +58,9 @@ public class Laboratory {
 			preparedStmt.setString(11, OpenTime);
 			preparedStmt.setString(12, CloseTime);
 			// execute the statement
-			System.out.println("VALUES1");
+			
 			preparedStmt.execute();
-			System.out.println("VALUES3");
+			
 			con.close();
 			String newLaboratories = readLaboratories();
 			output = "{\"status\":\"success\", \"data\": \"" + newLaboratories + "\"}";

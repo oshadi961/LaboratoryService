@@ -43,7 +43,7 @@ $(document).on("click", "#btnSave", function(event) {
 		dataType : "text",
 		complete : function(response, status) {
 			onItemSaveComplete(response.responseText, status);
-			alert(response.responseText);
+			
 		}
 	});
 	
@@ -58,7 +58,7 @@ function onItemSaveComplete(response, status) {
 		if (resultSet.status.trim() == "success") {
 			$("#alertSuccess").text("Successfully saved.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divLabsGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();
@@ -111,7 +111,7 @@ $(document).on("click", ".btnRemove", function(event) {
 		dataType : "text",
 		complete : function(response, status) {
 			onItemDeleteComplete(response.responseText, status);
-			alert(response);
+			
 		}
 	});
 });
@@ -122,7 +122,7 @@ function onItemDeleteComplete(response, status) {
 		if (resultSet.status.trim() == "success") {
 			$("#alertSuccess").text("Successfully deleted.");
 			$("#alertSuccess").show();
-			$("#divItemsGrid").html(resultSet.data);
+			$("#divLabsGrid").html(resultSet.data);
 		} else if (resultSet.status.trim() == "error") {
 			$("#alertError").text(resultSet.data);
 			$("#alertError").show();
