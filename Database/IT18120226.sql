@@ -16,3 +16,11 @@ labPassword varchar(15),
 OpenTime varchar(10),
 CloseTime varchar(10)
 );
+
+
+
+INSERT INTO lab VALUES ('0001', 'Hemas Laboratory', 'Waliwita', 'Kaduwela', 'Colombo', 'Western', 'osusal@gmail.com', '0713244631', 'OsuColombo', 'osu@123', '08:00', '17:00');
+
+INSERT INTO lab VALUES ('0002', 'Durdans Laboratory', 'Waliwita', 'Rajagiriya', 'Colombo', 'Western', 'osusal@gmail.com', '0713244631', 'DurdansColombo', 'Durdans@123', '08:00', '17:00');
+
+INSERT INTO lab VALUES ('0003', 'LHD Collection Centre', ' New Hospital Rd', 'Sri Jayawardenepura Kotte', 'Colombo', 'Western', 'LankaHospitals@gmail.com', '0719629800', 'LHDColombo', 'osu@123', '08:00', '19:00');
