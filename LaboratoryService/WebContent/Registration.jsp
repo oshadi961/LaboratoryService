@@ -114,7 +114,8 @@
 
 			<br>
 		</div>
-		<div class="container">
+		<!-- <div class="container"> -->
+		<div class="form-v9-content">
 			<div id="divLabsGrid">
 				<%
 					Laboratory labObj = new Laboratory();
