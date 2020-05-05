@@ -117,8 +117,8 @@ public class Laboratory {
 				output += "<td>" + OpenTime + "</td>";
 				output += "<td>" + CloseTime + "</td>";
 				// buttons
-				output += "<td><input name='btnUpdate' type='button' value='Update' class='btnUpdate btn btn-secondary'></td>"
-						+ "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-laboratoryid='"
+				output += "<td><input name='btnUpdate' type='button' value='UPDATE' class='btnUpdate btn btn-outline-info'></td>"
+						+ "<td><input name='btnRemove' type='button' value='REMOVE' class='btnRemove btn btn-outline-danger' data-laboratoryid='"
 						+ labRegID + "'>" + "</td></tr>";
 			}
 			con.close();
