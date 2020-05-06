@@ -62,11 +62,18 @@ public class LabsAPI extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
-		String output = labObj.updateLaboratory(paras.get("hidLabIDSave").toString(), paras.get("LabName").toString(),
-				paras.get("LabAddress").toString(), paras.get("LabCity").toString(),
-				paras.get("LabDestrict").toString(), paras.get("LabProvince").toString(), paras.get("Email").toString(),
+		String output = labObj.updateLaboratory(paras.get("hidLabIDSave").toString(),
+				paras.get("LabName").toString().replace("+", " "),
+				paras.get("LabAddress").toString().replace("%2C", ",").replace("%2F", "/").replace("%3A", ":")
+						.replace("+", " "),
+				paras.get("LabCity").toString().replace("+", " "),
+				paras.get("LabDestrict").toString().replace("+", " "),
+				paras.get("LabProvince").toString().replace("+", " "),
+				paras.get("Email").toString().replace("%40", "@").replace("+", " "),
 				paras.get("LabContactNum").toString(), paras.get("LabUsername").toString(),
-				paras.get("Password").toString(), paras.get("OpenTime").toString(), paras.get("CloseTime").toString());
+				paras.get("Password").toString().replace("%40", "@").replace("%23", "#").replace("%24", "$"),
+				paras.get("OpenTime").toString().replace("%3A", ":"),
+				paras.get("CloseTime").toString().replace("%3A", ":"));
 		response.getWriter().write(output);
 	}
 
